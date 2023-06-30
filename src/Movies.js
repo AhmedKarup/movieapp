@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import AddMovieModal from "./AddMovieModal";
-
+import "bootstrap/dist/css/bootstrap.min.css";
 const Movies = () => {
   const [movieList, setMovieList] = useState([]);
 
@@ -34,9 +34,14 @@ const Movies = () => {
     <>
       <div className=" w-100  h-100 ">
         <h2>This is Movies page</h2>
-        <button onClick={() => setAddModalVisible(!addModalVisible)}>
-          Add movie
-        </button>
+        <div className="">
+          <button
+            className="btn btn-light  btn-outline-danger "
+            onClick={() => setAddModalVisible(!addModalVisible)}
+          >
+            Add movie
+          </button>
+        </div>
         <div>
           <table className="table table-striped">
             <thead>
