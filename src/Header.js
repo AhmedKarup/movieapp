@@ -7,15 +7,23 @@ const Header = () => {
       <div className="d-flex justify-content-center m-3">
         <h2>MovieApp</h2>
       </div>
-      <nav className="navbar navbar-expand-sm  bg- navbar-dark">
-        <ul className="navbar-nav">
+      <nav className="navbar navbar-expand-sm  bg- navbar-dark ">
+        <ul className="navbar-nav ">
           <li className="nav-item- m-3">
-            <Link className="btn btn-light  btn-outline-dark " to="/">
+            <Link
+              className="btn btn-light  btn-outline-dark "
+              style={{ width: "150px" }}
+              to="/"
+            >
               Home
             </Link>
           </li>
           <li className="nav-item- m-3">
-            <Link className="btn btn-light  btn-outline-dark " to="/movies">
+            <Link
+              className="btn btn-light  btn-outline-dark "
+              style={{ width: "150px" }}
+              to="/movies"
+            >
               Movies
             </Link>
           </li>
