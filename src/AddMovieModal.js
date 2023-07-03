@@ -156,16 +156,17 @@ const AddMovieModal = ({ setModalIsVisible, refreshCallback }) => {
           </div>
           {/* Buttons */}
 
-          <div className=" mb-3 w-50 ">
+          <div className=" slika mb-3 w-100">
             <img src={baseImage} width="250px" height="250"></img>
           </div>
 
           {/* Create Button */}
 
           {/* Add image */}
-          <div className="Create">
-            <div className="d-flex justify-content-between align-items-center ">
+          <div className="Create ">
+            <div className="choose d-flex justify-content-between align-items-center ">
               <input
+                className="input"
                 type="file"
                 accept="image/*"
                 onChange={(e) => {

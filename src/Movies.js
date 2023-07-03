@@ -61,7 +61,7 @@ const Movies = () => {
         </div>
         {/* tablehead */}
         <div className="p-2">
-          <table className="table table-striped ">
+          <table className="table shadow-lg w-100 ">
             <thead>
               <tr>
                 <th>Id</th>
@@ -80,14 +80,15 @@ const Movies = () => {
                 <tr key={movie.moviesId}>
                   <td>{movie.movieId}</td>
                   <td>
-                    <img src={movie.photo} width={100} />
+                    <img className="photo " src={movie.photo} />
                   </td>
                   <td>{movie.movieName}</td>
                   <td>{movie.category}</td>
                   <td>{movie.genre}</td>
                   <td>{movie.releaseDate}</td>
                   <td>{movie.dateOfCreate}</td>
-                  <div className="OptionBtn">
+
+                  <div className="OptionBtn ">
                     <button
                       onClick={() => deleteMovie(movie.movieId)}
                       type="button"
@@ -95,10 +96,10 @@ const Movies = () => {
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
+                        width="20"
+                        height="20"
                         fill="currentColor"
-                        class="bi bi-trash"
+                        class="bi bi-trash "
                         viewBox="0 0 16 16"
                       >
                         <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z" />
@@ -109,8 +110,8 @@ const Movies = () => {
                     <button type="button" className="btn btn-light mr-1">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
+                        width="20"
+                        height="20"
                         fill="currentColor"
                         class="bi bi-file-earmark-plus"
                         viewBox="0 0 16 16"

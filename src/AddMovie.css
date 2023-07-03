@@ -19,6 +19,26 @@
 .OptionBtn {
   justify-content: center;
   display: flex;
-  margin-top: 50px;
+  margin-top: 80px;
   gap: 10px;
+}
+.photo {
+  height: 200px;
+  width: 150px;
+  object-fit: fill;
+}
+.texttabele {
+  text-align: center;
+}
+tr th {
+  text-align: center;
+}
+tr td {
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+.slika {
+  display: flex;
+  justify-content: center;
 }
