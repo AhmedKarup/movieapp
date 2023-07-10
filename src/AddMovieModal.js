@@ -34,6 +34,7 @@ const AddMovieModal = ({ setModalIsVisible, refreshCallback }) => {
       };
     });
   };
+  // POST
   const saveMovie = async () => {
     try {
       await fetch("http://localhost:5189/api/Movies/post", {
@@ -54,10 +55,56 @@ const AddMovieModal = ({ setModalIsVisible, refreshCallback }) => {
       refreshCallback();
     } catch {}
   };
+  // const UpdateMovie = async () => {
+  //   try {
+  //     await fetch(`http://localhost:5189/api/Movie/update`, {
+  //       method: "PUT",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //         accept: "*/*",
+  //       },
+  //       body: JSON.stringify({
+  //         movieName: movieName,
+  //         releaseDate: releaseDate,
+  //         category: category,
+  //         photo: baseImage,
+  //         genre: genre,
+  //       }),
+  //     });
+  //     closeModal();
+  //     refreshCallback();
+  //   } catch (error) {
+  //     console.log("Error updating movie:", error);
+  //   }
+  // };
 
   const closeModal = () => {
     setModalIsVisible(false);
   };
+  const genreOptions = [
+    "Action",
+    "Comedy",
+    "Drama",
+    "Thriller",
+    "Adventure",
+    "Horror",
+    "Mystery",
+    "Fantasy",
+    "Western",
+    "Documentary",
+  ];
+  // Generisanje godina
+  function generateYearOptions(startYear, endYear) {
+    const options = [];
+    for (let year = startYear; year <= endYear; year++) {
+      options.push(
+        <option key={year} value={year}>
+          {year}
+        </option>
+      );
+    }
+    return options;
+  }
 
   return (
     <div className=" w-100 h-100 position-fixed inset-0 bg-dark bg-opacity-25 d-flex justify-content-center align-items-center transition-opacity top-0  ">
@@ -96,8 +143,8 @@ const AddMovieModal = ({ setModalIsVisible, refreshCallback }) => {
               </div>
             </div>
 
-            <div className="row mb-3 ">
-              <div className="col-auto ">
+            <div className="row mb-3">
+              <div className="col-auto">
                 <span
                   className="input-group-text text-bg-danger"
                   style={{ width: "140px" }}
@@ -106,51 +153,63 @@ const AddMovieModal = ({ setModalIsVisible, refreshCallback }) => {
                 </span>
               </div>
               <div className="col">
-                <input
+                <select
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}
-                  type="text"
-                  className="form-control "
+                  className="form-control"
                   style={{ width: "250px" }}
-                />
+                >
+                  <option value="">Select Category</option>
+                  <option value="Movies">Movies</option>
+                  <option value="Series">Series</option>
+                </select>
               </div>
             </div>
+
             <div className="row mb-3">
-              <div className="col-auto  ">
+              <div className="col-auto">
                 <span
-                  className="input-group-text text-bg-danger "
+                  className="input-group-text text-bg-danger"
                   style={{ width: "140px" }}
                 >
                   Genre
                 </span>
               </div>
               <div className="col">
-                <input
+                <select
                   value={genre}
                   onChange={(e) => setGenre(e.target.value)}
-                  type="text"
-                  className="form-control "
+                  className="form-control"
                   style={{ width: "250px" }}
-                />
+                >
+                  <option value="">Select Genre</option>
+                  {genreOptions.map((genreOption) => (
+                    <option key={genreOption} value={genreOption}>
+                      {genreOption}
+                    </option>
+                  ))}
+                </select>
               </div>
             </div>
-            <div className="row w-100 ">
-              <div className="col-auto  ">
+
+            <div className="row w-100">
+              <div className="col-auto">
                 <span
-                  className="input-group-text text-bg-danger "
+                  className="input-group-text text-bg-danger"
                   style={{ width: "140px" }}
                 >
                   ReleaseDate
                 </span>
               </div>
               <div className="col">
-                <input
+                <select
                   value={releaseDate}
                   onChange={(e) => setrelaseDate(e.target.value)}
-                  type="text"
-                  className="form-control "
+                  className="form-control"
                   style={{ width: "250px" }}
-                />
+                >
+                  {generateYearOptions(2000, 2023)}
+                </select>
               </div>
             </div>
           </div>
