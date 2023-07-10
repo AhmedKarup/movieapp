@@ -2,10 +2,14 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import AddMovieModal from "./AddMovieModal";
 import "bootstrap/dist/css/bootstrap.min.css";
+import UpdateMovieModal from "./UpdateMovieModal";
 const Movies = () => {
   const [movieList, setMovieList] = useState([]);
 
   const [addModalVisible, setAddModalVisible] = useState(false);
+  const [updateMovieModal, setUpdateModalVisible] = useState(false);
+
+  const [currentMovie, setCurrentMovie] = useState({});
 
   useEffect(() => {
     refresh();
@@ -107,7 +111,13 @@ const Movies = () => {
                       </svg>
                     </button>
 
-                    <button type="button" className="btn btn-light mr-1">
+                    <button
+                      onClick={() =>
+                        setCurrentMovie(movie) & setUpdateModalVisible(true)
+                      }
+                      type="button"
+                      className="btn btn-light mr-1"
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="20"
@@ -131,6 +141,13 @@ const Movies = () => {
         <AddMovieModal
           setModalIsVisible={setAddModalVisible}
           refreshCallback={refresh}
+        />
+      )}
+      {updateMovieModal && (
+        <UpdateMovieModal
+          setModalIsVisible={setUpdateModalVisible}
+          refreshCallback={refresh}
+          currentMovie={currentMovie}
         />
       )}
     </>
