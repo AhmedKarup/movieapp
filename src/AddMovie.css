@@ -1,3 +1,10 @@
+.App-container {
+  box-shadow: 0 0.5rem 1rem;
+}
+.hTitle h2 {
+  margin: 20px;
+  font-size: 60px;
+}
 .modal-content {
   width: 450px;
   height: 600px;
@@ -41,4 +48,35 @@ tr td {
 .slika {
   display: flex;
   justify-content: center;
+}
+.homephoto {
+  border-radius: 20px;
+  width: 200px;
+  height: 300px;
+  box-shadow: 0 0.7rem 1rem;
+  align-items: center;
+  margin-top: 20px;
+}
+.homecontent {
+  margin-left: 20px;
+  margin-top: 20px;
+  display: flex;
+  gap: 30px;
+}
+
+.genre-section {
+  gap: 30px;
+}
+.kategorija {
+  width: 180px;
+  text-align: center;
+  align-self: center;
+  margin-left: 30px;
+  box-shadow: 0 0.7rem 1rem;
+}
+.genre-section {
+  margin-bottom: 20px;
+}
+.naslov {
+  margin-top: 15px;
 }

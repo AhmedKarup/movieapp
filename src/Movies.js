@@ -21,7 +21,7 @@ const Movies = () => {
         });
     } catch {}
   };
-
+  // delete movie
   const deleteMovie = async (id) => {
     try {
       await fetch(`http://localhost:5189/api/Movies/movies/delete/${id}`, {

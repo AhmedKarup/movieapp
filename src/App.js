@@ -1,6 +1,6 @@
 import { Children } from "react";
 import "./App.css";
-import { Home } from "./Home";
+import Home from "./Home";
 import Movies from "./Movies";
 import { Form, Link } from "react-router-dom";
 import {

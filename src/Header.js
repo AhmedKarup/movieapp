@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="App-container">
-      <div className="d-flex justify-content-center m-3">
+    <div className="App-container  ">
+      <div className=" hTitle d-flex justify-content-center ">
         <h2>MovieApp</h2>
       </div>
       <nav className="navbar navbar-expand-sm  bg- navbar-dark ">
