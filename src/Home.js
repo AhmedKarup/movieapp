@@ -41,23 +41,25 @@ const Home = () => {
   });
 
   return (
-    <div className="homecontent ">
+    <div className="homecontent  ">
       <div className="genre-container  ">
         {genreOptions.map((genreOption) => (
-          <div key={genreOption} className="genre-section d-flex ">
+          <div key={genreOption} className="genre-section  ">
             <div className="kategorija">
               <h2>{genreOption}</h2>
             </div>
-            {genreMovies[genreOption].map((movie) => (
-              <div key={movie.id}>
-                <img
-                  className="homephoto"
-                  src={movie.photo}
-                  alt={movie.movieName}
-                />
-                <p className="naslov text-center fs-4">{movie.movieName}</p>
-              </div>
-            ))}
+            <div className="maincont d-flex ">
+              {genreMovies[genreOption].map((movie) => (
+                <div key={movie.id}>
+                  <img
+                    className="homephoto "
+                    src={movie.photo}
+                    alt={movie.movieName}
+                  />
+                  <p className="naslov text-center fs-4">{movie.movieName}</p>
+                </div>
+              ))}
+            </div>
           </div>
         ))}
       </div>

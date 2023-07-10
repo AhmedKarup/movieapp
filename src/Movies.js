@@ -49,7 +49,7 @@ const Movies = () => {
   return (
     <>
       {/* addMovieButton */}
-      <div className=" w-100  h-100 ">
+      <div className=" mainx  h-100 ">
         <div className="p-3 ">
           <button
             className="btn btn-light  btn-outline-danger mb-2"
@@ -60,8 +60,8 @@ const Movies = () => {
           </button>
         </div>
         {/* tablehead */}
-        <div className="p-2">
-          <table className="table shadow-lg w-100 ">
+        <div className=" mytable p-2 ">
+          <table className=" table shadow-lg w-100 bg-white ">
             <thead>
               <tr>
                 <th>Id</th>

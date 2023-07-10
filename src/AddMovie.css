@@ -1,5 +1,11 @@
 .App-container {
-  box-shadow: 0 0.5rem 1rem;
+  box-shadow: 0 0.4rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #23395d;
+  color: white;
 }
 .hTitle h2 {
   margin: 20px;
@@ -58,10 +64,12 @@ tr td {
   margin-top: 20px;
 }
 .homecontent {
-  margin-left: 20px;
-  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 50px;
   display: flex;
   gap: 30px;
+  background-color: #152238;
 }
 
 .genre-section {
@@ -71,12 +79,34 @@ tr td {
   width: 180px;
   text-align: center;
   align-self: center;
-  margin-left: 30px;
-  box-shadow: 0 0.7rem 1rem;
+  width: auto;
+  box-shadow: 0 0.1rem 0.8rem;
+  padding: 2px;
+  margin-bottom: 1rem;
+  color: white;
 }
 .genre-section {
   margin-bottom: 20px;
 }
 .naslov {
   margin-top: 15px;
+}
+.genre-container {
+  width: 100%;
+  margin-right: 15px;
+}
+.maincont {
+  gap: 50px;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  color: white;
+}
+.mainx {
+  padding: 40px;
+  padding-right: 40px;
+  background-color: #152238;
+}
+.mytable {
+  border-radius: 20px;
+  background-color: white;
 }
